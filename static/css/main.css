@@ -161,3 +161,8 @@ a {
   z-index: 1;
   aspect-ratio: 1/1;
 }
+
+.eightEvent {
+  color: aliceblue;
+  width: 20%;
+}
