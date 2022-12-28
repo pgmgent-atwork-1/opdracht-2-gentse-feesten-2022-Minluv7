@@ -6,17 +6,18 @@ const news_URL = " https://www.pgm.gent/data/gentsefeesten/news.json";
       console.log("1. Application started!");
       this.cacheElements();
       this.fetchEvents();
+      this.fetchNews();
     },
     cacheElements() {
       console.log("2. Cache all exisiting DOM elements!");
       this.$overlayEvents = document.getElementById("overlayEvents");
+      this.$news = document.getElementById("news");
     },
 
     fetchEvents() {
       fetch(events_URL)
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
           const htmlForEvents = this.renderDataForEightEvents(data);
           this.$overlayEvents.innerHTML = htmlForEvents;
         })
@@ -41,7 +42,23 @@ const news_URL = " https://www.pgm.gent/data/gentsefeesten/news.json";
     },
 
     fetchNews() {
-      fetch(news_URL);
+      fetch(news_URL)
+        .then((response) => response.json())
+        .then((data) => {
+          const htmlForNews = this.renderDataForNews(data);
+          this.$news.innerHTML = htmlForNews;
+        })
+        .catch((error) => console.log(error));
+    },
+    renderDataForNews(NEWS) {
+      const News = NEWS.slice(0, 3);
+      return News.map((news) => {
+        return `
+        <div class="link_News">
+        ${news.title}
+        </div>
+        `;
+      }).join("");
     },
   };
   app.initialize();
