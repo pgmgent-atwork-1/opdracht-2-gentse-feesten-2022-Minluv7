@@ -13,14 +13,16 @@
       <nav>
         <div class="header-logo">
           <div class="logo-white">
-            <img src="static/img/GF-logo-inverse-NL.svg" alt="white-logo" />
+            <a href="index.html"
+              ><img src="static/img/GF-logo-inverse-NL.svg" alt="white-logo"
+            /></a>
           </div>
           <ul class="black-header">
             <li>
-              <a href="index.html">nieuws</a>
+              <a href="news.html">nieuws</a>
             </li>
             <li>
-              <a href="">programma</a>
+              <a href="events/day.html">programma</a>
             </li>
             <li>
               <a href="#">praktisch</a>
@@ -38,7 +40,7 @@
               /></a>
             </li>
             <li class="hamburger">
-              <a href=""
+              <a href="#" id="hamburgerBtn"
                 ><svg
                   version="1.1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -53,13 +55,81 @@
               ></a>
             </li>
           </ul>
+          <div id="hamburgerOverview" class="hamburgerOverview open">
+            <div class="hamburger-logo-buttons">
+              <div class="hamburger-buttons">
+                <a href="#"
+                  ><svg
+                    id="clowse"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="53"
+                    height="32"
+                    viewBox="0 0 53 32"
+                  >
+                    <title>cross</title>
+                    <path
+                      d="M53.378 29.173l-23.79-13.215 23.64-13.131-1.57-2.827-25.399 14.108-24.537-13.63-1.57 2.827 22.777 12.652-22.928 12.736 1.57 2.827 24.688-13.713 25.55 14.192z"
+                    ></path></svg
+                ></a>
+                <a href="#">
+                  <svg
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                  >
+                    <title>search</title>
+                    <path
+                      d="M31.474 28.951l-6.043-6.025c1.95-2.484 3.007-5.551 3.004-8.708 0-2.812-0.834-5.561-2.396-7.899s-3.783-4.16-6.381-5.237c-2.598-1.076-5.457-1.358-8.215-0.809s-5.291 1.903-7.28 3.891-3.342 4.522-3.891 7.28-0.267 5.617 0.809 8.215c1.076 2.598 2.898 4.818 5.237 6.381s5.087 2.396 7.899 2.396c3.157 0.004 6.225-1.054 8.708-3.004l6.025 6.043c0.165 0.167 0.362 0.299 0.578 0.389s0.449 0.137 0.684 0.137c0.235 0 0.467-0.047 0.683-0.137s0.413-0.223 0.578-0.389c0.167-0.165 0.299-0.362 0.389-0.578s0.137-0.449 0.137-0.683-0.046-0.467-0.137-0.684c-0.090-0.217-0.222-0.413-0.389-0.578zM3.554 14.218c0-2.109 0.625-4.171 1.797-5.924s2.837-3.12 4.786-3.927c1.948-0.807 4.092-1.018 6.161-0.607s3.969 1.427 5.46 2.918c1.491 1.491 2.507 3.391 2.918 5.46s0.2 4.212-0.607 6.161c-0.807 1.948-2.174 3.614-3.927 4.785s-3.815 1.797-5.924 1.797c-2.828 0-5.54-1.123-7.54-3.123s-3.123-4.712-3.123-7.54z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="hamburger-logo">
+                <img src="static/img/GF-logo-NL.svg" alt="black logo" />
+              </div>
+            </div>
+            <div class="hamburger-nav">
+              <ul class="head-list">
+                <li><a href="news.html">nieuws</a></li>
+                <li class="programma-detail">
+                  <a href="#">programma</a>
+                  <ul class="days">
+                    <li><a href="">Vrijdag 15 juli</a></li>
+                    <li><a href="">Zaterdag 16 juli</a></li>
+                    <li><a href="">Zondag 17 juli</a></li>
+                    <li><a href="">Maandag 18 juli</a></li>
+                    <li><a href="">Dinsdag 19 juli</a></li>
+                    <li><a href="">Woensdag 20 juli</a></li>
+                    <li><a href="">Donderdag 21 juli</a></li>
+                    <li><a href="">Vrijdag 22 juli</a></li>
+                    <li><a href="">Zaterdag 23 juli</a></li>
+                    <li><a href="">Zondag 24 juli</a></li>
+                    <li><a href="">Programma</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">praktisch</a></li>
+                <li><a href="#">hoe naar gf22?</a></li>
+              </ul>
+            </div>
+            <div class="hamburger-background"></div>
+          </div>
         </div>
       </nav>
+      <div class="title-cover">
+        <h1>De wedergeboorte</h1>
+      </div>
       <div class="background-hero"></div>
     </header>
-    <div id="overlayEvents"></div>
-    <div id="news"></div>
+    <div id="overlayEvents" class="overlay-events"></div>
+    <div id="news" class="news"></div>
     <footer>
+      <div class="footer-arrows">
+        <h2><a href="#">spot onze foto's</a></h2>
+        <h2><a href="#">aanschouw onze video's</a></h2>
+      </div>
       <div class="footer-register">
         <div class="exclusive-background-img">
           <h2>blijf op de hoogte</h2>
@@ -196,4 +266,5 @@
     </footer>
   </body>
   <script src="static/js/main.js"></script>
+  <script src="static/js/hamburger.js"></script>
 </html>

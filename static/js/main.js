@@ -1,5 +1,5 @@
 const events_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
-const news_URL = " https://www.pgm.gent/data/gentsefeesten/news.json";
+const news_URL = "https://www.pgm.gent/data/gentsefeesten/news.json";
 (() => {
   const app = {
     initialize() {
@@ -45,12 +45,12 @@ const news_URL = " https://www.pgm.gent/data/gentsefeesten/news.json";
       fetch(news_URL)
         .then((response) => response.json())
         .then((data) => {
-          const htmlForNews = this.renderDataForNews(data);
-          this.$news.innerHTML = htmlForNews;
+          const htmlForNewsHome = this.renderDataForNewsHome(data);
+          this.$news.innerHTML = htmlForNewsHome;
         })
         .catch((error) => console.log(error));
     },
-    renderDataForNews(NEWS) {
+    renderDataForNewsHome(NEWS) {
       const News = NEWS.slice(0, 3);
       return News.map((news) => {
         return `

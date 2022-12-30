@@ -80,6 +80,111 @@ p {
   padding-left: 1rem;
 }
 
+.hamburgerOverview {
+  width: 100%;
+  height: 100%;
+  background: #e83c3c;
+  position: fixed;
+  top: 0%;
+  padding: 4rem 2rem;
+  left: -100%;
+}
+.hamburgerOverview.open {
+  left: 0%;
+}
+
+.hamburger-logo-buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.hamburger-buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 3rem;
+}
+
+.hamburger-buttons a:last-child {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hamburger-buttons a:last-child {
+    display: block;
+  }
+}
+
+.hamburger-buttons a {
+  width: 75%;
+}
+
+@media (min-width: 1280px) {
+  .hamburger-buttons a {
+    fill: white;
+  }
+}
+
+.hamburger-logo {
+  padding-bottom: 4rem;
+}
+
+.hamburger-nav {
+  display: flex;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.hamburger-background {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .hamburger-background {
+    display: block;
+  }
+}
+
+.hamburger-background {
+  background-image: url(../img/hero-background.jpeg);
+  background-repeat: no-repeat;
+  margin-left: auto;
+  z-index: -1;
+  position: absolute;
+  top: -3.3125rem;
+  right: 0;
+  width: 50%;
+  height: 120vh;
+  background-size: cover;
+}
+
+.head-list {
+  text-transform: uppercase;
+  padding: 0;
+}
+.days {
+  text-transform: none;
+}
+
+.head-list,
+.days {
+  list-style: none;
+}
+
+.head-list li a,
+.days li a {
+  color: black;
+  text-decoration: none;
+  line-height: 4rem;
+}
+@media (min-width: 768px) {
+  .programma-detail {
+    display: flex;
+  }
+}
+
 .hamburger svg {
   fill: white;
 }
@@ -109,6 +214,7 @@ p {
 
 .black-header li {
   display: none;
+  align-self: center;
 }
 
 .red-header {
@@ -162,7 +268,18 @@ p {
   width: 1.5rem;
 }
 
+/* cover titles*/
+.title-cover h1 {
+  color: white;
+  height: 12px;
+  background-color: #e83c3c;
+  margin-left: auto;
+  width: max-content;
+  padding-right: 2rem;
+}
+
 /* hero */
+
 .background-hero {
   background-image: url(../img/hero-background.jpeg);
   height: 45.3125rem;
@@ -176,15 +293,78 @@ p {
   justify-content: center;
 }
 
+.overlay-events,
+.news {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.overlay-events {
+  display: flex;
+  width: 100%;
+  overflow: scroll;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
 .eightEvent {
   color: white;
   width: 20%;
+  list-style: none;
+  padding: 0;
 }
 .link_News {
   color: white;
 }
 
+/*news.html*/
+
+.all_news {
+  max-width: 90rem;
+  margin: 0 auto;
+  display: flex;
+  border: 2px solid #fff;
+  justify-content: space-between;
+  width: 75rem;
+  margin-bottom: 4rem;
+}
+
+.all_news img {
+  width: 50rem;
+  height: 28rem;
+  object-fit: cover;
+}
+
+.all_news p {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.all_news:hover {
+  background-color: #e83c3c;
+  color: #000;
+  width: max-content;
+  padding: 2rem;
+}
+
 /*footer*/
+.footer-arrows {
+  margin: 0 auto;
+  max-width: 90rem;
+}
+
+.footer-arrows h2 {
+  background-color: #e83c3c;
+  width: max-content;
+  padding: 6px 15px;
+  text-transform: capitalize;
+}
+.footer-arrows h2 a {
+  font-family: "Stolzl-display";
+  color: black;
+  text-decoration: none;
+}
 
 .exclusive-background-img {
   padding: 1rem;
@@ -304,6 +484,19 @@ p {
   height: 2px;
   background-color: #000;
   margin: 1rem 0;
+}
+@media (min-width: 768px) {
+  .red-footer-text {
+    display: flex;
+    flex-direction: row;
+    /* height: 1rem; */
+    height: 2px;
+    margin-left: 12rem;
+    margin-right: 12rem;
+    background-color: #000;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .red-footer-text p {
