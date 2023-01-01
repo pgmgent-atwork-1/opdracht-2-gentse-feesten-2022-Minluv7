@@ -273,6 +273,7 @@ p {
 .title-background {
   display: flex;
   align-content: flex-end;
+  flex-direction: row-reverse;
   align-items: flex-end;
 }
 
@@ -284,7 +285,7 @@ p {
   max-width: 90rem;
   margin: 0 auto;
   padding: 0 1.099rem;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .title-cover {
@@ -391,6 +392,12 @@ p {
   list-style: none;
   padding: 0;
 }
+
+.eightEvent img {
+  aspect-ratio: 2/1;
+  width: 24rem;
+}
+
 .link_News {
   color: white;
 }
@@ -424,6 +431,12 @@ p {
   color: #000;
   width: max-content;
   padding: 2rem;
+}
+
+/*day.html*/
+
+.category {
+  color: white;
 }
 
 /*footer*/

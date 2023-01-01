@@ -18,8 +18,8 @@ const news_URL = "https://www.pgm.gent/data/gentsefeesten/news.json";
       fetch(events_URL)
         .then((response) => response.json())
         .then((data) => {
-          const htmlForEvents = this.renderDataForEightEvents(data);
-          this.$overlayEvents.innerHTML = htmlForEvents;
+          const htmlForEightEvents = this.renderDataForEightEvents(data);
+          this.$overlayEvents.innerHTML = htmlForEightEvents;
         })
         .catch((error) => console.log(error));
     },
