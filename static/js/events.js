@@ -19,21 +19,20 @@ const events_day_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
         response = await fetch(events_day_URL);
         const EVENTS = await response.json();
         console.log(EVENTS);
-        const htmlForEventCategory = this.RenderHTMLForEvents(CATEGORY, EVENTS);
-        this.$category.innerHTML = htmlForEventCategory;
+        this.RenderHTMLForEvents(CATEGORY, EVENTS);
       } catch (error) {
         //handle error
         console.log(error);
       }
     },
     RenderHTMLForEvents(Category, Events) {
-      const day = "20";
-      Category.map((category) => {
+      const day = "23";
+      const htmlForEventCategory = Category.map((category) => {
         const filterEvents = Events.filter((event) => {
           return event.day === day && event.category.includes(category);
         });
         return `
-        <h2 id="${category}">${category}<h2>
+    <h2 id="${category}">${category}<h2>
         <ul>
         ${filterEvents
           .map((events) => {
@@ -45,6 +44,8 @@ const events_day_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
           .join("")}
         </ul>`;
       }).join("");
+
+      this.$category.innerHTML = htmlForEventCategory;
     },
   };
 
