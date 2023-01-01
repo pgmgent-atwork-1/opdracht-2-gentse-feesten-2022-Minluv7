@@ -39,6 +39,8 @@ const events_day_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
             return `
             <li>
             ${events.title}
+            ${events.start}
+            ${events.category}
             </li>`;
           })
           .join("")}
