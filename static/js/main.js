@@ -29,12 +29,16 @@ const news_URL = "https://www.pgm.gent/data/gentsefeesten/news.json";
       return eightEvents
         .map((eightEvents) => {
           return `
-        <ul class="eightEvent">
-        <li> ${eightEvents.day_of_week} ${eightEvents.day} juli</li>
-        <li> <img src ="${eightEvents.image.full}" alt ="event pictures"/></li>
-        <li> ${eightEvents.title}</li>
-        <li> ${eightEvents.location}</li>
-        <li> ${eightEvents.start}</li>
+        <ul class="eight-event">
+        <li> <a href=""><p> ${eightEvents.day_of_week} ${eightEvents.day} juli </p>
+         <img src ="${eightEvents.image.full}" alt ="event pictures"/>
+         <div class="eight_events-box">
+            <h3> ${eightEvents.title} </h3>
+            <p>${eightEvents.location} </p>
+            <p>${eightEvents.start} </p>
+         </div>   
+        </a>
+        </li>
         </ul>
         `;
         })

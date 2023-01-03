@@ -91,6 +91,7 @@ p {
 }
 .hamburgerOverview.open {
   left: 0%;
+  z-index: 1;
 }
 
 .hamburger-logo-buttons {
@@ -386,57 +387,156 @@ p {
   flex-direction: row;
 }
 
-.eightEvent {
+.eight-event {
   color: white;
-  width: 20%;
+  height: 27rem;
+  display: flex;
+  width: 24rem;
+  margin-bottom: 4rem;
+  padding-top: 2rem;
   list-style: none;
-  padding: 0;
+  aspect-ratio: 2/1;
+  align-items: flex-end;
 }
 
-.eightEvent img {
+.eight-event img {
   aspect-ratio: 2/1;
   width: 24rem;
+}
+
+.eight-event p:first-child {
+  position: relative;
+  width: max-content;
+  top: 4rem;
+  margin: 1rem;
+  padding: 0.25rem 0.5rem;
+  background-color: black;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.eight-event a {
+  text-decoration: none;
+}
+
+.eight-event h3 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.eight_events-box {
+  position: relative;
+  margin-top: -2rem;
+  margin-right: 3.5rem;
+  padding: 1.75rem;
+  background: #000;
+  border: 1px solid white;
+}
+
+.eight_events-box :nth-child(2) {
+  background-color: #e83c3c;
+  color: black;
+  width: max-content;
+  font-size: 18px;
+  padding: 2px 8px;
+}
+
+.eight_events-box:hover {
+  transition: all 0.2s ease;
+  box-shadow: -1rem 1rem 0rem 1rem #e83c3c;
+  margin-top: -3rem;
+  margin-left: 2rem;
+  margin-right: 1.5rem;
 }
 
 .link_News {
   color: white;
 }
 
+.home-news h1 {
+  color: white;
+  text-transform: capitalize;
+  font-size: 4rem;
+  padding: 0 1rem;
+  display: inline-block;
+  border-top: 2.5rem solid #e83c3c;
+  border-right: 1.5rem solid #e83c3c;
+  height: 4.5rem;
+  margin-left: 1rem;
+}
+
 /* arrows*/
+
+.title-arrow {
+  display: flex;
+  margin-right: 9rem;
+  margin-top: 35px;
+  flex-direction: row-reverse;
+}
+
+.title-arrow a {
+  text-decoration: none;
+}
 
 .arrow-right::before,
 .arrow-right::after {
   content: "";
   display: block;
-  right: 34px;
-  position: absolute;
-  top: 40%;
+  right: 155px;
+  /* margin-right: 17rem; */
+  position: relative;
+  top: -46%;
   transition: left 0.1s;
 }
 
 .arrow-right::before {
-  border-color: white;
+  /* border-color: white;
   border-style: solid;
   border-width: 0 0 7px 7px;
   height: 30px;
   align-items: center;
-  margin: auto;
   margin-top: -12px;
   right: 2rem;
   width: 30px;
+  transform: rotate(225deg); */
+  border-color: white;
+  border-style: solid;
+  border-width: 0 0 7px 7px;
+  height: 30px;
+  top: 2.04rem;
+  align-items: center;
+  margin-top: -6px;
+  right: 7rem;
+  width: 30px;
   transform: rotate(225deg);
 }
+
 .arrow-right::after {
   background: white;
   height: 6px;
-  width: 110px;
+  width: 77px;
 }
-.arrow-right:hover::before,
+
 .arrow-right:hover::after {
-  right: 1rem;
+  width: 107px;
 }
-.arrow-right:hover::after {
-  width: 8rem;
+
+.arrow-right:hover:before {
+  right: 5rem;
+}
+
+.arrow-right:hover {
+  margin-right: -3rem;
+}
+
+.arrow-right p {
+  display: flex;
+  flex-direction: column;
+}
+
+.arrow-right p span {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 /*news.html*/

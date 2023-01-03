@@ -8,6 +8,8 @@ const events_day_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
     },
     cachElements() {
       this.$category = document.getElementById("category");
+      this.$days = document.getElementById("days");
+      this.$dayDetail = document.getElementById("dayDetail");
     },
 
     async fetchData() {
@@ -26,7 +28,7 @@ const events_day_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
       }
     },
     RenderHTMLForEvents(Category, Events) {
-      const day = "23";
+      const day = "15";
       const htmlForEventCategory = Category.map((category) => {
         const filterEvents = Events.filter((event) => {
           return event.day === day && event.category.includes(category);
