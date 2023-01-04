@@ -34,15 +34,16 @@ const events_day_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
           return event.day === day && event.category.includes(category);
         });
         return `
-    <h2 id="${category}">${category}<h2>
+    <h2 id="${category}">${category} <a href ="" class="up-arrow"></a></h2>
         <ul>
         ${filterEvents
           .map((events) => {
             return `
-            <li>
-            ${events.title}
-            ${events.start}
-            ${events.category}
+            <li> <a href="">
+            <p>${events.start}</p>
+            <h3>${events.title}</h3>
+            <p>${events.category}</p>
+            </a>
             </li>`;
           })
           .join("")}
