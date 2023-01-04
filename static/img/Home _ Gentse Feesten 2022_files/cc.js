@@ -1,0 +1,1 @@
+if(console){var cookiedomainwarning='Error: The domain WWW.PGM.GENT is not authorized to show the cookie banner for domain group ID 65b44d23-ae9e-4fc3-b274-f4883a4df442. Please add it to the domain group in the Cookiebot Manager to authorize the domain.';if(typeof console.warn === 'function'){console.warn(cookiedomainwarning)}else{console.log(cookiedomainwarning)}};
