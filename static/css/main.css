@@ -779,8 +779,14 @@ p {
 .category ul li {
   display: flex;
   flex-direction: column;
-  border: 1px solid;
+  border: 1px solid white;
   padding: 1rem;
+}
+.category ul li:hover,
+.category ul li:hover h3,
+.category ul li:hover p {
+  background-color: white;
+  color: black;
 }
 
 .category ul li a {
