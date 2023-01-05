@@ -380,9 +380,16 @@ p {
   border: none;
 }
 
+.search-events-svg a {
+  fill: white;
+}
+
 .search-events-svg {
   padding: 1rem;
-  fill: white;
+}
+.search-events-svg:hover {
+  background-color: #e83c3c;
+  fill: #000;
 }
 
 .search-events input::placeholder {
