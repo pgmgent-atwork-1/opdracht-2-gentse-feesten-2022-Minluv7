@@ -359,6 +359,36 @@ p {
   }
 }
 
+/* day.html*/
+.search-events {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.search-events form {
+  display: flex;
+  border: 1px solid white;
+  width: 50%;
+  font-family: "Stolzl";
+  justify-content: space-between;
+}
+
+.search-events input {
+  background: transparent;
+  color: white;
+  padding: 1rem 28rem 1rem 1rem;
+  border: none;
+}
+
+.search-events-svg {
+  padding: 1rem;
+  fill: white;
+}
+
+.search-events input::placeholder {
+  margin-left: -3rem;
+}
+
 /* hero */
 
 .background-hero {
