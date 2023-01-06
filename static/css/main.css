@@ -370,6 +370,8 @@ p {
 .search-events {
   max-width: 90rem;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 .search-events form {
