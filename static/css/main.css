@@ -331,6 +331,9 @@ p {
     margin-left: -7rem;
     text-transform: capitalize;
   }
+  .title-cover-search h1 {
+    margin-left: -14rem;
+  }
 }
 
 @media (min-width: 80rem) {
@@ -356,6 +359,10 @@ p {
     font-size: 3.5rem;
     margin-left: -9rem;
     text-transform: capitalize;
+  }
+
+  .title-cover-search h1 {
+    margin-left: -18rem;
   }
 }
 

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programma doorzoeken | Gentse Feesten 2022</title>
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/reset.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="static/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="static/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="static/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="static/favicons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="static/favicons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="header-logo">
+          <div class="logo-white">
+            <a href="index.html"
+              ><img src="static/img/GF-logo-inverse-NL.svg" alt="white-logo"
+            /></a>
+          </div>
+          <ul class="black-header">
+            <li>
+              <a href="news.html">nieuws</a>
+            </li>
+            <li>
+              <a href="events/day.html">programma</a>
+            </li>
+            <li>
+              <a href="#">praktisch</a>
+            </li>
+          </ul>
+        </div>
+        <div class="background-red">
+          <ul class="red-header">
+            <li>
+              <a href="">hoe naar gf22?</a>
+            </li>
+            <li class="search-icon">
+              <a href="search.html">
+                <img src="static/img/search.svg" alt="search icon"
+              /></a>
+            </li>
+            <li class="hamburger">
+              <a href="#" id="hamburgerBtn"
+                ><svg
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="55"
+                  height="32"
+                  viewBox="0 0 55 32"
+                >
+                  <title>hamburger</title>
+                  <path
+                    d="M0 0h54.825v3.404h-54.825v-3.404zM11.072 14.298h32.681v3.404h-32.681v-3.404zM0 28.596h54.825v3.404h-54.825v-3.404z"
+                  ></path></svg
+              ></a>
+            </li>
+          </ul>
+          <div id="hamburgerOverview" class="hamburgerOverview open">
+            <div class="hamburger-logo-buttons">
+              <div class="hamburger-buttons">
+                <a href="#"
+                  ><svg
+                    id="clowse"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="53"
+                    height="32"
+                    viewBox="0 0 53 32"
+                  >
+                    <title>cross</title>
+                    <path
+                      d="M53.378 29.173l-23.79-13.215 23.64-13.131-1.57-2.827-25.399 14.108-24.537-13.63-1.57 2.827 22.777 12.652-22.928 12.736 1.57 2.827 24.688-13.713 25.55 14.192z"
+                    ></path></svg
+                ></a>
+                <a href="#">
+                  <svg
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                  >
+                    <title>search</title>
+                    <path
+                      d="M31.474 28.951l-6.043-6.025c1.95-2.484 3.007-5.551 3.004-8.708 0-2.812-0.834-5.561-2.396-7.899s-3.783-4.16-6.381-5.237c-2.598-1.076-5.457-1.358-8.215-0.809s-5.291 1.903-7.28 3.891-3.342 4.522-3.891 7.28-0.267 5.617 0.809 8.215c1.076 2.598 2.898 4.818 5.237 6.381s5.087 2.396 7.899 2.396c3.157 0.004 6.225-1.054 8.708-3.004l6.025 6.043c0.165 0.167 0.362 0.299 0.578 0.389s0.449 0.137 0.684 0.137c0.235 0 0.467-0.047 0.683-0.137s0.413-0.223 0.578-0.389c0.167-0.165 0.299-0.362 0.389-0.578s0.137-0.449 0.137-0.683-0.046-0.467-0.137-0.684c-0.090-0.217-0.222-0.413-0.389-0.578zM3.554 14.218c0-2.109 0.625-4.171 1.797-5.924s2.837-3.12 4.786-3.927c1.948-0.807 4.092-1.018 6.161-0.607s3.969 1.427 5.46 2.918c1.491 1.491 2.507 3.391 2.918 5.46s0.2 4.212-0.607 6.161c-0.807 1.948-2.174 3.614-3.927 4.785s-3.815 1.797-5.924 1.797c-2.828 0-5.54-1.123-7.54-3.123s-3.123-4.712-3.123-7.54z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="hamburger-logo">
+                <img src="static/img/GF-logo-NL.svg" alt="black logo" />
+              </div>
+            </div>
+            <div class="hamburger-nav">
+              <ul class="head-list">
+                <li><a href="news.html">nieuws</a></li>
+                <li class="programma-detail">
+                  <a href="#">programma</a>
+                  <ul class="days">
+                    <li><a href="">Vrijdag 15 juli</a></li>
+                    <li><a href="">Zaterdag 16 juli</a></li>
+                    <li><a href="">Zondag 17 juli</a></li>
+                    <li><a href="">Maandag 18 juli</a></li>
+                    <li><a href="">Dinsdag 19 juli</a></li>
+                    <li><a href="">Woensdag 20 juli</a></li>
+                    <li><a href="">Donderdag 21 juli</a></li>
+                    <li><a href="">Vrijdag 22 juli</a></li>
+                    <li><a href="">Zaterdag 23 juli</a></li>
+                    <li><a href="">Zondag 24 juli</a></li>
+                    <li><a href="">Programma</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">praktisch</a></li>
+                <li><a href="#">hoe naar gf22?</a></li>
+              </ul>
+            </div>
+            <div class="hamburger-background"></div>
+          </div>
+        </div>
+      </nav>
+      <div class="title-background">
+        <div class="space-title">
+          <div class="title-cover">
+            <div class="title-cover-search">
+              <h1>Programma doorzoeken</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="space-title-arrow">
+        <div class="title-arrow">
+          <a href="#" class="arrow-right">
+            <p><span>Vandaag</span> te beleven</p>
+          </a>
+        </div>
+      </div>
+    </header>
+    <footer>
+      <div class="footer-arrows">
+        <h2>
+          <a href="#">spot onze foto's</a>
+          <a href="#" class="black-arrow-right"></a>
+        </h2>
+        <h2>
+          <a href="#" class="black-arrow-left"></a>
+          <a href="#">aanschouw onze video's</a>
+        </h2>
+      </div>
+      <div class="footer-register">
+        <div class="exclusive-background-img">
+          <h2>blijf op de hoogte</h2>
+          <p>Schrijf je in op de nieuwsbrief van de Gentse Feesten</p>
+          <div class="email">
+            <label for="email">Jouw e-mailadres </label>
+            <input
+              type="email"
+              id="email"
+              name="user_email"
+              placeholder="Jouw e-mailadres"
+            />
+          </div>
+          <button>
+            <p>inschrijven</p>
+          </button>
+          <p class="privacy-text">
+            De stad Gent zal de persoonsgegevens die je invult met respect voor
+            jouw <span> <a href="#">privacy</a></span> behandelen.
+          </p>
+        </div>
+        <div class="background-register">
+          <img src="static/img/footer-background.jpeg" alt="" />
+        </div>
+      </div>
+      <div class="red__background">
+        <div class="space-around-red">
+          <div class="links-logo">
+            <ul class="social__links">
+              <li>
+                <a href="https://m.facebook.com/gentsefeesten">
+                  <svg
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                  >
+                    <title>facebook</title>
+                    <path
+                      d="M17.49 25v-8.21h2.95l0.44-3.2h-3.39v-2.043c0-0.927 0.276-1.558 1.697-1.558l1.813-0.001v-2.862c-0.766-0.080-1.655-0.126-2.555-0.126-0.030 0-0.061 0-0.091 0h0.005c-2.614 0-4.403 1.491-4.403 4.23v2.36h-2.956v3.2h2.956v8.21h3.535z"
+                    ></path>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.flickr.com/photos/stadgent">
+                  <svg
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                  >
+                    <title>flickr</title>
+                    <path
+                      d="M11.034 12c2.228 0 4.034 1.791 4.034 4 0 2.21-1.806 4-4.034 4s-4.034-1.79-4.034-4c0-2.209 1.806-4 4.034-4zM25 16c0 2.21-1.806 4-4.034 4s-4.034-1.79-4.034-4c0-2.209 1.806-4 4.034-4s4.034 1.791 4.034 4z"
+                    ></path>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://m.youtube.com/channel/UCUn5Z0JK-sEbql4cVNdaH-Q"
+                >
+                  <svg
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                  >
+                    <title>youtube</title>
+                    <path
+                      d="M26.8 12.1v0c0-0.3-0.3-1.9-1.1-2.7-0.7-0.7-1.7-1.1-2.7-1.2h-0.2c-3-0.2-6.6-0.2-6.8-0.2s-3.8 0-6.8 0.2h-0.2c-1 0-1.9 0.5-2.6 1.2-0.8 0.8-1.1 2.4-1.1 2.7-0.2 1.2-0.3 2.4-0.3 3.6v1.6c0 1.2 0.1 2.4 0.2 3.6 0 0.3 0.3 1.8 1.1 2.7 0.8 0.7 1.7 1.1 2.7 1.1 0.1 0 0.2 0 0.2 0h0.1c1.7 0.2 6.4 0.2 6.6 0.2v0c0.2 0 3.8 0 6.8-0.2h0.2c1 0 1.9-0.5 2.6-1.2 0.8-0.8 1.1-2.4 1.1-2.7 0.1-1.2 0.2-2.4 0.2-3.6v-1.6c0.2-1.1 0.1-2.3 0-3.5zM13.1 19.9v-7.4l7.1 3.7-7.1 3.7z"
+                    ></path>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <div class="black__logo">
+              <img src="static/img/logo-footer.svg" alt="" />
+            </div>
+          </div>
+          <div class="red-footer-text">
+            <p>De wedergeboorte</p>
+            <div class="footer-text__bottom"></div>
+            <p>15 - 24 juli 2022</p>
+          </div>
+          <div class="hastag-sponsors">
+            <div class="hastag22">
+              <p>#GF22</p>
+            </div>
+            <div class="sponsors">
+              <ul>
+                <li class="sponser-link">
+                  <a href="https://www.avs.be/" target="_blank">
+                    <img src="static/img/avs-logo.svg" alt="Avs weblink" />
+                  </a>
+                </li>
+                <li class="sponser-link">
+                  <a href="https://stad.gent/nl" target="_blank">
+                    <img
+                      src="static/img/stad-gent.svg"
+                      alt="stad Gent weblink"
+                    />
+                  </a>
+                </li>
+                <li class="sponser-link">
+                  <a href="https://www.maene.be/nl_BE/" target="_blank">
+                    <img src="static/img/maene.svg" alt="Maene weblink" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lowercase">
+        <ul>
+          <li>
+            <a href="#">Privacy</a>
+          </li>
+          <li>
+            <a href="#">Cookie instellingen</a>
+          </li>
+        </ul>
+        <p>
+          <span>Deze website is gebouwd door Nese Yildirim</span> in opdracht
+          van Artevelde Hogeschool voor het vak @work1, en heeft enkel een
+          educatief nut.
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script src="static/js/hamburger.js"></script>
+</html>
