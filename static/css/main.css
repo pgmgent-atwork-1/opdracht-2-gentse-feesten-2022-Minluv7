@@ -190,7 +190,7 @@ p {
   color: var(--white);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .programma-detail {
     display: flex;
   }
@@ -557,8 +557,8 @@ p {
   font-size: 4rem;
   padding: 0 1rem;
   display: inline-block;
-  border-top: 2.5rem solid --standard-red;
-  border-right: 1.5rem solid --standard-red;
+  border-top: 2.5rem solid var(--standard-red);
+  border-right: 1.5rem solid var(--standard-red);
   height: 4.5rem;
   margin-left: 1rem;
 }
@@ -584,6 +584,8 @@ p {
 
 .left-right_arrows {
   display: flex;
+  max-width: 90rem;
+  margin: 0 auto;
 }
 
 /* arrows*/
@@ -714,7 +716,7 @@ left-right_arrows {
   border-style: solid;
   border-width: 0 0 0.4375rem 0.4375rem;
   height: 1.875rem;
-  left: 117rem;
+  left: 74rem;
   top: 2.04rem;
   width: 1.875rem;
   transform: rotate(225deg);
@@ -726,7 +728,7 @@ left-right_arrows {
   border-width: 0 0 0.4375rem 0.4375rem;
   height: 1.875rem;
   top: 2.04rem;
-  left: 114.1875rem;
+  left: 71.1875rem;
   width: 1.875rem;
   transform: rotate(50deg);
 }
@@ -817,7 +819,7 @@ left-right_arrows {
   height: 0.25rem;
   width: 4.375rem;
   top: 0.9375rem;
-  left: 115rem;
+  left: 72rem;
 }
 
 .overlay-arrow-left::after {
@@ -825,7 +827,7 @@ left-right_arrows {
   height: 0.25rem;
   width: 4.375rem;
   top: 0.9375rem;
-  left: 114rem;
+  left: 71rem;
 }
 
 .up-arrow::after {
@@ -868,7 +870,7 @@ left-right_arrows {
 }
 
 .overlay-arrow-right:hover::before {
-  left: 119.25rem;
+  left: 76.5rem;
 }
 
 .arrow-right:hover,
