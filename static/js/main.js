@@ -25,13 +25,17 @@ const news_URL = "https://www.pgm.gent/data/gentsefeesten/news.json";
     },
 
     renderDataForEightEvents(EIGHTEVENTS) {
-      const eightEvents = EIGHTEVENTS.slice(24, 32);
+      const random = Math.floor(Math.random() * (EIGHTEVENTS.length - 8));
+      const eightEvents = EIGHTEVENTS.slice(random, random + 8);
+
       return eightEvents
         .map((eightEvents) => {
           return `
         <ul class="eight-event">
-        <li> <a href=""><p> ${eightEvents.day_of_week} ${eightEvents.day} juli </p>
-         <img src ="${eightEvents.image.full}" alt ="event pictures"/>
+        <li> <a href=""><p> ${eightEvents.day_of_week} ${
+            eightEvents.day
+          } juli </p>
+         ${this.notFount(eightEvents)}
          <div class="eight_events-box">
             <h3> ${eightEvents.title} </h3>
             <p>${eightEvents.location} </p>
@@ -43,6 +47,14 @@ const news_URL = "https://www.pgm.gent/data/gentsefeesten/news.json";
         `;
         })
         .join("\n");
+    },
+
+    notFount(eightEvents) {
+      if (eightEvents.image === null) {
+        return `<img src ="static/img/error-404.jpeg" alt ="not found"/>`;
+      } else {
+        return ` <img src ="${eightEvents.image.full}" alt ="event pictures"/>`;
+      }
     },
 
     fetchNews() {
