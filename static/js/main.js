@@ -27,7 +27,6 @@ const news_URL = "https://www.pgm.gent/data/gentsefeesten/news.json";
     renderDataForEightEvents(EIGHTEVENTS) {
       const random = Math.floor(Math.random() * (EIGHTEVENTS.length - 8));
       const eightEvents = EIGHTEVENTS.slice(random, random + 8);
-
       return eightEvents
         .map((eightEvents) => {
           return `

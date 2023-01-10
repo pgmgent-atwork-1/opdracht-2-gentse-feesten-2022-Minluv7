@@ -28,7 +28,8 @@ const events_day_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
       }
     },
     RenderHTMLForEvents(Category, Events) {
-      const day = "15";
+      const params = new URLSearchParams(window.location.search);
+      const day = params.get("day") ?? "15";
       const htmlForEventCategory = Category.map((category) => {
         const filterEvents = Events.filter((event) => {
           return event.day === day && event.category.includes(category);
