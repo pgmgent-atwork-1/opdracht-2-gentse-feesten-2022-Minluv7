@@ -214,17 +214,49 @@
         </div>
       </div>
     </header>
+    <div class=""></div>
     <div id="eventDays"></div>
+    <div id="list_categories" class="list_categories"></div>
+    <div class="change-buttons">
+      <div class="raster_button">
+        <svg
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+        >
+          <title>raster</title>
+          <path
+            d="M0 28c0 2.209 1.791 4 4 4s4-1.791 4-4v0c0-2.209-1.791-4-4-4s-4 1.791-4 4v0M4 12c-2.209 0-4 1.791-4 4s1.791 4 4 4c2.209 0 4-1.791 4-4s-1.791-4-4-4zM28 8c2.209 0 4-1.791 4-4s-1.791-4-4-4c-2.209 0-4 1.791-4 4s1.791 4 4 4zM0 4c0 2.209 1.791 4 4 4s4-1.791 4-4v0c0-2.209-1.791-4-4-4s-4 1.791-4 4v0M28 12c-2.209 0-4 1.791-4 4s1.791 4 4 4c2.209 0 4-1.791 4-4s-1.791-4-4-4zM28 24c-2.209 0-4 1.791-4 4s1.791 4 4 4c2.209 0 4-1.791 4-4s-1.791-4-4-4zM12 28c0 2.209 1.791 4 4 4s4-1.791 4-4v0c0-2.209-1.791-4-4-4s-4 1.791-4 4v0M12 4c0 2.209 1.791 4 4 4s4-1.791 4-4v0c0-2.209-1.791-4-4-4s-4 1.791-4 4v0M16 12c-2.209 0-4 1.791-4 4s1.791 4 4 4c2.209 0 4-1.791 4-4s-1.791-4-4-4z"
+          ></path>
+        </svg>
+      </div>
+      <div class="list_button">
+        <svg
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          width="45"
+          height="32"
+          viewBox="0 0 45 32"
+        >
+          <title>list</title>
+          <path
+            d="M13.742 5.053h29.192c1.395 0 2.526-1.131 2.526-2.526s-1.132-2.526-2.526-2.526h-29.192c-1.396 0-2.526 1.131-2.526 2.526s1.131 2.526 2.526 2.526zM42.934 13.474h-29.192c-1.396 0-2.526 1.131-2.526 2.526s1.131 2.526 2.526 2.526h29.192c1.395 0 2.526-1.131 2.526-2.526s-1.132-2.526-2.526-2.526zM42.934 26.947h-29.192c-1.396 0-2.526 1.132-2.526 2.526s1.131 2.526 2.526 2.526h29.192c1.395 0 2.526-1.132 2.526-2.526s-1.132-2.526-2.526-2.526zM2.537 0h-0.022c-1.396 0-2.515 1.131-2.515 2.526s1.141 2.526 2.537 2.526 2.526-1.131 2.526-2.526-1.131-2.526-2.526-2.526zM2.537 13.474h-0.022c-1.396 0-2.515 1.131-2.515 2.526s1.141 2.526 2.537 2.526 2.526-1.131 2.526-2.526-1.131-2.526-2.526-2.526zM2.537 26.947h-0.022c-1.396 0-2.515 1.132-2.515 2.526s1.141 2.526 2.537 2.526 2.526-1.132 2.526-2.526c0-1.395-1.131-2.526-2.526-2.526z"
+          ></path>
+        </svg>
+      </div>
+    </div>
     <div class="search-events">
-      <form action="day.html" method="post" id="formSearch">
+      <form action="../search.html" method="get" id="formSearch">
         <input
           id="txtSearch"
-          name="txtSearch"
+          name="search"
           type="text"
           placeholder="Doorzoek het programma..."
         />
         <div class="search-events-svg">
-          <a href="#" id="searchIconEvents">
+          <a id="searchIconEvents" type="submit">
             <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
@@ -392,7 +424,7 @@
     </footer>
   </body>
   <script src="../static/js/events.js"></script>
-  <script src="../static/js/days.js"></script>
+  <script src="../static/js/categories.js"></script>
   <script src="../static/js/searchEvents.js"></script>
   <script src="../static/js/hamburger.js"></script>
 </html>

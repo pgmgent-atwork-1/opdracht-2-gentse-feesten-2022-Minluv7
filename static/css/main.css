@@ -381,6 +381,22 @@ p {
 }
 
 /* day.html*/
+
+.list_categories ul li {
+  color: var(--white);
+  list-style: url(../img/category.svg);
+}
+
+.change-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.raster_button svg,
+.list_button svg {
+  fill: var(--white);
+}
 .search-events {
   max-width: 90rem;
   margin: 0 auto;
@@ -421,6 +437,19 @@ p {
 
 /* hero */
 
+.hero-days_block {
+  margin: 0 auto;
+  max-width: 90rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 48rem) {
+  .hero-days_block {
+    flex-direction: row;
+  }
+}
+
 .background-hero {
   float: left;
   background-image: url(../img/hero-background.jpeg);
@@ -428,7 +457,7 @@ p {
   background-repeat: no-repeat;
   max-width: 90rem;
   margin: 0 auto;
-  width: 50%;
+  width: 100%;
   background-size: contain;
 }
 
@@ -454,10 +483,13 @@ p {
   text-decoration: none;
 }
 
+.tent-news_img {
+  display: flex;
+}
+
 .news_img {
-  width: -webkit-fill-available;
-  padding: 0 1rem;
   margin-bottom: 2rem;
+  padding: 0 1rem;
 }
 
 @media (min-width: 48rem) {
@@ -726,6 +758,7 @@ left-right_arrows {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
+    width: 70%;
   }
   .link_News .title-arrow {
     margin-right: 23.25rem;
@@ -1012,7 +1045,7 @@ left-right_arrows {
     max-width: 100%;
   }
   .link_News:last-child {
-    width: -webkit-fill-available;
+    flex: 1;
   }
 }
 
@@ -1132,21 +1165,22 @@ left-right_arrows {
 
 /*footer*/
 .footer-arrows {
-  padding-left: 1rem;
+  padding: 0 1rem;
   margin: 0 auto;
   max-width: 90rem;
 }
 
-.footer-arrows h2:first-child {
-  width: 35%;
-}
+@media (min-width: 38rem) {
+  .footer-arrows h2:first-child {
+    width: 35%;
+  }
 
-.footer-arrows h2:first-child:hover {
-  width: 40%;
-}
-
-.footer-arrows h2:last-child {
-  width: 40%;
+  .footer-arrows h2:last-child {
+    width: 40%;
+  }
+  .footer-arrows h2:first-child:hover {
+    width: 40%;
+  }
 }
 
 .footer-arrows h2 {
@@ -1283,7 +1317,6 @@ p {
     height: 0.125rem;
     margin-left: 12rem;
     margin-right: 12rem;
-    background-color: var(--black);
     align-items: center;
     justify-content: space-between;
   }
@@ -1297,7 +1330,7 @@ p {
 }
 
 .red-footer-text {
-  gap: 1;
+  gap: 1rem;
 }
 
 .red-footer-text p {
