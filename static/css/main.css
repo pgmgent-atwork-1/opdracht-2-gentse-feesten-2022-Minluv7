@@ -185,15 +185,30 @@ p {
   color: var(--black);
   text-decoration: none;
   line-height: 4rem;
+  display: flex;
+  gap: 1rem;
 }
 .head-list li a:hover,
 .days li a:hover {
   color: var(--white);
+  fill: var(--white);
+}
+
+.programma-detail svg:first-child {
+  display: none;
 }
 
 @media (min-width: 48rem) {
   .programma-detail {
     display: flex;
+    position: absolute;
+    top: 16rem;
+  }
+  .programma-detail svg:first-child {
+    display: flex;
+  }
+  .programma-detail svg:last-child {
+    display: none;
   }
 }
 
@@ -382,26 +397,111 @@ p {
 
 /* day.html*/
 
-.list_categories ul li {
+.space-filter {
+  padding: 1rem;
+}
+
+.filters {
+  max-width: 90rem;
+  margin: 0 auto;
+  border: 0.0625rem solid var(--white);
+}
+
+.checkbox-all {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  gap: 1rem;
+}
+
+.checkbox:first-child {
+  display: flex;
+  gap: 1rem;
+}
+
+.checkbox svg {
+  fill: var(--white);
+  width: 33%;
+}
+.checkbox label {
   color: var(--white);
-  list-style: url(../img/category.svg);
+  font-family: "Stolzl";
+}
+
+.icon-list ul {
+  display: flex;
+  padding: 0;
+}
+.icon {
+  border: 1px solid var(--white);
+  flex: 1;
+}
+.icon svg {
+  fill: var(--white);
+  margin: 1rem;
+}
+
+.icon a {
+  text-align: -webkit-center;
+}
+
+.list_categories {
+  line-height: 3rem;
+  margin: 2rem;
+}
+
+.list_categories ul {
+  padding: 0;
+}
+
+.list_categories ul li a {
+  color: var(--white);
+  display: flex;
+  font-size: 1.3rem;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.list_categories ul li a:hover {
+  text-decoration: underline;
+}
+
+.list_categories ul li a svg {
+  max-width: 1.2rem;
 }
 
 .change-buttons {
   display: flex;
-  gap: 1rem;
   justify-content: flex-end;
 }
 
 .raster_button svg,
 .list_button svg {
   fill: var(--white);
+  padding: 8px;
 }
+
+.raster_button svg:hover,
+.list_button svg:hover {
+  background-color: var(--standard-red);
+  fill: var(--black);
+}
+
+.raster_button.active .events-excl-pic li img {
+  display: block;
+}
+
+#eventsExclPic {
+  display: none;
+}
+
 .search-events {
   max-width: 90rem;
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  border: 1px solid var(--white);
 }
 
 .search-events form {
@@ -468,6 +568,7 @@ p {
 }
 
 .overlay-events {
+  margin-top: 6rem;
   display: flex;
   width: 100%;
   overflow: scroll;
@@ -574,6 +675,8 @@ p {
   transition: all 0.2s ease;
   box-shadow: -1rem 1rem 0rem 1rem --standard-red;
   margin-top: -3rem;
+  border-left: 2rem solid var(--standard-red);
+  border-bottom: 2rem solid var(--standard-red);
   margin-left: 2rem;
   margin-right: 1.5rem;
 }
@@ -623,11 +726,6 @@ p {
 .days-block_daypg ul {
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
-}
-
-.days-block_daypg ul {
-  display: flex;
   list-style: none;
 }
 
@@ -1134,8 +1232,27 @@ left-right_arrows {
   display: flex;
   justify-content: center;
   margin: 8rem 0 4rem;
-  font-size: 3rem;
+  font-size: 2rem;
   gap: 2rem;
+}
+
+.raster_button button,
+.list_button button {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.events-excl-pic a img {
+  display: none;
+}
+
+.raster_button:active .events-excl-pic a img {
+  display: block;
+}
+
+.events-excl-pic img {
+  display: none;
 }
 
 .category ul {
@@ -1381,6 +1498,11 @@ p {
   max-width: 90rem;
 }
 
+.lowercase ul li svg {
+  fill: var(--white);
+  padding-bottom: 0.375rem;
+}
+
 .lowercase ul {
   padding: 0;
   display: flex;
@@ -1396,6 +1518,8 @@ p {
   font-weight: 400;
   font-size: 0.8rem;
   text-decoration: none;
+  display: flex;
+  gap: 0.375rem;
 }
 
 .lowercase a:hover {

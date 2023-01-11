@@ -33,11 +33,12 @@ const events_day_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
         });
         return `
         <h2 id="${category}">${category} <a href ="" class="up-arrow"></a></h2>
-        <ul>
+        <ul >
         ${filterEvents
           .map((events) => {
             return `
             <li> <a href="">
+            ${this.noPicture(events)}
             <p>${events.start}</p>
             <h3>${events.title}</h3>
             <p>${events.category}</p>
@@ -48,6 +49,13 @@ const events_day_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
         </ul>`;
       }).join("");
       this.$category.innerHTML = htmlForEventCategory;
+    },
+    noPicture(events) {
+      if (events.image === null) {
+        return `<img id="eventsExclPic" src ="static/img/error-404.jpeg" alt ="not found"/>`;
+      } else {
+        return `<img id="eventsExclPic"  src ="${events.image.full}" alt ="event pictures"/>`;
+      }
     },
   };
 
