@@ -427,6 +427,7 @@ p {
   color: var(--white);
   padding: 0.0625rem 0.1875rem;
   flex-direction: row-reverse;
+  text-decoration: none;
   align-items: center;
 }
 
@@ -499,10 +500,20 @@ p {
 .icon {
   border: 1px solid var(--white);
   flex: 1;
+  list-style: none;
 }
+
+.icon:nth-child(2) {
+  background-color: var(--white);
+}
+
 .icon svg {
   fill: var(--white);
   margin: 1rem;
+}
+
+.icon:nth-child(2) svg {
+  fill: var(--black);
 }
 
 .icon a {
@@ -802,15 +813,14 @@ p {
 @media (min-width: 48rem) {
   .days-block_daypg ul {
     display: flex;
-    /* list-style: none; */
     flex-wrap: wrap;
-    /* padding: 0; */
     margin-left: -27.1rem;
   }
 }
 
 .specific-day a {
   margin-left: -5rem;
+  text-decoration: none;
 }
 
 .specific-day p:first-child {
