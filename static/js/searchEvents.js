@@ -5,13 +5,18 @@
       this.registerSearchListeners();
     },
     cachElements() {
-      this.$searchIconEvents = document.getElementById("searchIconEvents");
+      this.$txtSearch = document.getElementById("txtSearch");
     },
 
     registerSearchListeners() {
-      this.$searchIconEvents.addEventListener("click", (e) => {
-        e.preventDefault();
+      this.$txtSearch.addEventListener("submit", (e) => {
+        const searchStr = e.currentTarget.elements.txtSearch.value;
+        console.log(searchStr);
       });
+    },
+
+    getDataFromEvents() {
+      this.$txtSearch;
     },
   };
   app.initialize();

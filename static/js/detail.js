@@ -1,5 +1,5 @@
 const category_URL = "https://www.pgm.gent/data/gentsefeesten/categories.json";
-const events_day_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
+const events_detail_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
 (() => {
   const app = {
     initialize() {
@@ -15,7 +15,7 @@ const events_day_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
         let response = await fetch(category_URL);
         const CATEGORY = await response.json();
         console.log(CATEGORY);
-        response = await fetch(events_day_URL);
+        response = await fetch(events_detail_URL);
         const EVENTS = await response.json();
         console.log(EVENTS);
         this.RenderHTMLForEvents(CATEGORY, EVENTS);
@@ -27,10 +27,10 @@ const events_day_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
     RenderHTMLForEvents(Category, Events) {
       const params = new URLSearchParams(window.location.search);
       const day = params.get("day") ?? "15";
-      console.log(day);
+      const id = params.get("id");
       const htmlForEventCategory = Category.map((category) => {
         const filterEvents = Events.filter((event) => {
-          return event.day === day && event.category.includes(category);
+          return event.id === id && event.day === day;
         });
         return `
         <h2 id="${category}">${category} <a href ="" class="up-arrow"></a></h2>
@@ -38,7 +38,7 @@ const events_day_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
         ${filterEvents
           .map((events) => {
             return `
-            <li> <a href="detail.html?=${events.id}">
+            <li> <a href="detail.html?=${events.id}day=${events.day}">
             ${this.noPicture(events)}
             <p>${events.start}</p>
             <h3>${events.title}</h3>
