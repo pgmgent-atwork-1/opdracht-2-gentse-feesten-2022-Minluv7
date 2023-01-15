@@ -29,8 +29,12 @@ const events_detail_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
       const day = params.get("day") ?? "15";
       const id = params.get("id");
       const htmlForEventCategory = Category.map((category) => {
-        const filterEvents = Events.filter((event) => {
-          return event.id === id && event.day === day;
+        const filterEvents = Events.find((event) => {
+          return (
+            event.id === id &&
+            event.day === day &&
+            event.category.includes(category)
+          );
         });
         return `
         <h2 id="${category}">${category} <a href ="" class="up-arrow"></a></h2>
