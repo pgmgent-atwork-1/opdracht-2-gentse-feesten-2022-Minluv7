@@ -11,7 +11,10 @@
     registerSearchListeners() {
       this.$txtSearch.addEventListener("submit", (e) => {
         const searchStr = e.currentTarget.elements.txtSearch.value;
-        console.log(searchStr);
+        const filteredEvents = events.filter((event) => {
+          return event.id.contain(searchStr);
+        });
+        console.log(filteredEvents);
       });
     },
 
