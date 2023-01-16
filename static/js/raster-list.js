@@ -11,10 +11,10 @@
     },
     getStyle() {
       rasterButton.addEventListener("click", () => {
-        eventsExclPic.style = "font-display: block";
+        element.classList.addEventListener = "display: block";
       });
       listButton.addEventListener("click", () => {
-        eventsExclPic.style = "font-display: none";
+        element.classList = "display: none";
       });
     },
   };

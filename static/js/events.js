@@ -38,7 +38,7 @@ const events_day_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
         ${filterEvents
           .map((events) => {
             return `
-            <li> <a href="detail.html?=${events.id}">
+            <li> <a href="detail.html?slug=${events.slug}&day=${events.day}">
             ${this.noPicture(events)}
             <p>${events.start}</p>
             <h3>${events.title}</h3>

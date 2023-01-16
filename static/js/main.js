@@ -72,7 +72,7 @@ const news_URL = "https://www.pgm.gent/data/gentsefeesten/news.json";
         <a href="#"><div class="link_News">
         <p>${news.title}</p>
         <div class="title-arrow">
-          <a href="#" class="news-arrow-right"> </a>
+          <div href="#" class="news-arrow-right"> </div>
         </div>
         </div>
         </a>
