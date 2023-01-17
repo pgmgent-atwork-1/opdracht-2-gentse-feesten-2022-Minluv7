@@ -29,20 +29,34 @@ const events_detail_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
       const event = Events.find((event) => {
         return event.slug === slug && event.day == day;
       });
-      return `<li> <a href="detail.html?slug=${event.slug}&day=${event.day}">
-          ${this.noPicture(event)}
-        <p>${event.start}</p>
-        <h3>${event.title}</h3>
-        <p>${event.category}</p>
+      return `<li class="detail-element"> <a href="detail.html?slug=${
+        event.slug
+      }&day=${event.day}">
+      <h2>${event.title}</h2>
+        <p class="detail__location"> <a href ="">${event.location}</a> ${
+        event.start
+      }u. - ${event.end}u.</p>
+        ${this.noDescription(event)}
+        ${this.noPicture(event)}
+        <p> Organisator: <a href ="#">${event.organizer}</a></p>
+        <p> Categoriën: <a href ="#">${event.category}</a></p>
         </a>
       </li>`;
     },
 
-    noPicture(events) {
-      if (events.image === null) {
-        return `<img id="eventsExclPic" src ="static/img/error-404.jpeg" alt ="not found"/>`;
+    noPicture(event) {
+      if (event.image === null) {
+        return `<img src ="static/img/error-404.jpeg" alt ="not found"/>`;
       } else {
-        return `<img id="eventsExclPic"  src ="${events.image.full}" alt ="event pictures"/>`;
+        return `<img   src ="${event.image.full}" alt ="event pictures"/>`;
+      }
+    },
+
+    noDescription(event) {
+      if (event.description === null) {
+        return "";
+      } else {
+        return `<p>${event.description}</p>`;
       }
     },
   };

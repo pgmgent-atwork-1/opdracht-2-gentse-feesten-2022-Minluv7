@@ -31,9 +31,10 @@ const news_URL = "https://www.pgm.gent/data/gentsefeesten/news.json";
         .map((eightEvents) => {
           return `
         <ul class="eight-event">
-        <li> <a href=""><p> ${eightEvents.day_of_week} ${
+        <li> <a href="events/detail.html?slug=${eightEvents.slug}&day=${
             eightEvents.day
-          } juli </p>
+          }">
+        <p>${eightEvents.day_of_week} ${eightEvents.day} juli</p>
          ${this.notFount(eightEvents)}
          <div class="eight_events-box">
             <h3> ${eightEvents.title} </h3>

@@ -1,26 +1,55 @@
+const EVENTSURL = "https://www.pgm.gent/data/gentsefeesten/events.json";
 (() => {
   const app = {
     initialize() {
       this.cachElements();
-      this.registerSearchListeners();
+
+      this.registerFilterEvents();
     },
     cachElements() {
-      this.$txtSearch = document.getElementById("txtSearch");
+      this.$searchResult = document.getElementById("searchResult");
     },
 
-    registerSearchListeners() {
-      this.$txtSearch.addEventListener("submit", (e) => {
-        const searchStr = e.currentTarget.elements.txtSearch.value;
-        const filteredEvents = events.filter((event) => {
-          return event.id.contain(searchStr);
-        });
-        console.log(filteredEvents);
-      });
+    //filter events
+    async registerFilterEvents() {
+      const filterEvents = async (search) => {
+        const data = await fetch(EVENTSURL, { method: "GET" });
+        const events = await data.json();
+        console.log(events);
+        const filteredEvents = events.filter(
+          (event) =>
+            event.category.findIndex((e) =>
+              e.toLowerCase().includes(search)
+            ) !== -1 ||
+            event.title.toLowerCase().includes(search) ||
+            event.location.toLowerCase().includes(search)
+        );
+        return filteredEvents;
+      };
+      const params = new URLSearchParams(window.location.search);
+      const search = params.get("search");
+      const events = await filterEvents(search);
+      this.$searchResult.innerHTML = events
+        .map((event) => {
+          console.log(event);
+          return `
+          <h2>${event.title}</h2>
+          <p>${event.day} ${event.day_of_week} juli</p>
+              ${this.noPicture(event)}
+          
+          `;
+        })
+        .join("");
     },
 
-    getDataFromEvents() {
-      this.$txtSearch;
+    noPicture(events) {
+      if (events.image === null) {
+        return `<img src ="static/img/error-404.jpeg"alt="not found"/>`;
+      } else {
+        return `<img src ="${events.image.full}" alt ="event pictures"/>`;
+      }
     },
   };
+
   app.initialize();
 })();
