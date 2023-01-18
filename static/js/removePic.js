@@ -15,11 +15,15 @@
         if (this.$exPic.classList.contains("list-view")) {
           this.$exPic.classList.remove("list-view");
         }
+        this.$rasterButton.classList.add("active");
+        this.$listButton.classList.remove("active");
       });
     },
     registerListenersAdd() {
       this.$listButton.addEventListener("click", (e) => {
         this.$exPic.classList.add("list-view");
+        this.$listButton.classList.add("active");
+        this.$rasterButton.classList.remove("active");
       });
     },
   };

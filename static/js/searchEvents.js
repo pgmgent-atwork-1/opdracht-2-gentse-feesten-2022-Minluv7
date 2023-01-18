@@ -3,7 +3,6 @@ const EVENTSURL = "https://www.pgm.gent/data/gentsefeesten/events.json";
   const app = {
     initialize() {
       this.cachElements();
-
       this.registerFilterEvents();
     },
     cachElements() {
@@ -33,10 +32,14 @@ const EVENTSURL = "https://www.pgm.gent/data/gentsefeesten/events.json";
         .map((event) => {
           console.log(event);
           return `
-          <h2>${event.title}</h2>
+          
           <p>${event.day} ${event.day_of_week} juli</p>
               ${this.noPicture(event)}
-          
+              <h2>${event.title}</h2>
+              <div>
+              <p>${event.location}</p>
+              <p>${event.start} u.</p>
+              </div>
           `;
         })
         .join("");

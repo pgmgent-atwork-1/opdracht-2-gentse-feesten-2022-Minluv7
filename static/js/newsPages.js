@@ -26,10 +26,9 @@ const news_URL = "https://www.pgm.gent/data/gentsefeesten/news.json";
       return NWS.map((news) => {
         return `
         <div class="all_news">
-        
         <p>${news.title}</p>
         <div class="all_news-arrow">
-        <a href="#" class="arrow-news">
+        <a href="#"class="arrow-news">
         </a>
       </div>
           <img src="https://www.pgm.gent/data/gentsefeesten${news.picture.medium}" alt="news pictures"/>
