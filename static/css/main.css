@@ -904,9 +904,6 @@ p {
   flex-direction: row;
 }
 
-/* .news {
-  padding: 1rem 1rem 0;
-} */
 .news a {
   text-decoration: none;
 }
@@ -1174,6 +1171,38 @@ p {
   }
 }
 
+.specific-day:first-child:hover,
+.specific-day:nth-child(2):hover,
+.specific-day:nth-child(3):hover,
+.specific-day:nth-child(6):hover,
+.specific-day:nth-child(7):hover,
+.specific-day:nth-child(8):hover {
+  background-color: var(--black);
+}
+
+.specific-day:first-child:hover p,
+.specific-day:nth-child(2):hover p,
+.specific-day:nth-child(3):hover p,
+.specific-day:nth-child(6):hover p,
+.specific-day:nth-child(7):hover p,
+.specific-day:nth-child(8):hover p {
+  color: var(--white);
+}
+
+.specific-day:last-child:hover,
+.specific-day:nth-child(4):hover,
+.specific-day:nth-child(5):hover,
+.specific-day:nth-child(9):hover {
+  background-color: var(--standard-red);
+}
+
+.specific-day:last-child:hover p,
+.specific-day:nth-child(4):hover p,
+.specific-day:nth-child(5):hover p,
+.specific-day:nth-child(9):hover p {
+  color: var(--black);
+}
+
 @media (min-width: 80rem) {
   .days-block_daypg ul li a {
     width: 7.3rem;
@@ -1331,21 +1360,23 @@ left-right_arrows {
   .news {
     display: grid;
     /* flex-wrap: wrap; */
-    /* flex: 1; */
+    flex: 1;
     /* grid-column-start: 1; */
     /* grid-column-end: 2; */
     /* padding: 0; */
-    float: 2rem;
+    /* float: 2rem; */
     /* grid-template-rows: 1fr 1fr; */
-    width: -webkit-fill-available;
+    /* width: -webkit-fill-available;
     grid-row-start: 1;
-    /* grid-row-end: 3; */
-    grid-row-end: 2rem;
+    /* grid-row-end: 3; 
+    grid-row-end: 2rem; */
     grid-template-columns: 1fr 1fr;
   }
+
   .news:last-child {
     flex: 1;
   }
+
   .link_News .title-arrow {
     margin-right: 23.25rem;
   }
@@ -1763,8 +1794,9 @@ left-right_arrows {
 .category ul li {
   display: flex;
   flex-direction: column;
-  border: 0.0625rem solid var(--white);
+  /* border: 0.0625rem solid var(--white); */
 }
+
 .category ul li:hover,
 .category ul li:hover h3,
 .category ul li:hover p {
@@ -1775,11 +1807,31 @@ left-right_arrows {
 .category ul li a {
   text-decoration: none;
   line-height: 2rem;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 .category ul li h3 {
   color: var(--white);
+}
+.border-events {
+  border: 0.0625rem solid var(--white);
+  padding: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .border-events p,
+  .border-events h3 {
+    border: 0.0625rem solid var(--white);
+    line-break: anywhere;
+    padding: 1rem;
+    flex: 1;
+  }
+
+  .border-events {
+    display: flex;
+    border: none;
+    padding: 0;
+  }
 }
 
 /*footer*/
