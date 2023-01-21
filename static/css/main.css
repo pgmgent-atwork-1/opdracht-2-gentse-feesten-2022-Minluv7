@@ -122,6 +122,9 @@ p {
   .hamburger-buttons a:last-child {
     display: block;
   }
+  .phone-search {
+    display: none;
+  }
 }
 
 .hamburger-buttons a {
@@ -427,6 +430,11 @@ p {
 .black-header li {
   display: none;
   align-self: center;
+}
+
+.black-header li::before {
+  border-left: 0.0625rem solid var(--white);
+  contain: "";
 }
 
 .red-header {
@@ -1003,10 +1011,8 @@ p {
 
 .eight_events-box:hover {
   transition: all 0.2s ease;
-  box-shadow: -1rem 1rem 0rem 1rem --standard-red;
+  box-shadow: -1rem 1rem 0rem 1rem var(--standard-red);
   margin-top: -4rem;
-  border-left: 2rem solid var(--standard-red);
-  border-bottom: 2rem solid var(--standard-red);
   margin-left: 2rem;
   margin-right: 1.5rem;
 }
@@ -1149,11 +1155,14 @@ p {
   width: 20%;
 }
 
+.black-header li:hover {
+  border-bottom: 0.0625rem solid var(--white);
+}
+
 @media (min-width: 48rem) {
   .days-block_daypg ul li a {
     text-decoration: none;
     padding: 2rem;
-    border: 0.0625rem solid var(--black);
     display: flex;
     align-items: center;
     width: 9rem;
@@ -1195,10 +1204,6 @@ p {
   .days-block_daypg ul li:nth-child(7):hover,
   .days-block_daypg ul li:nth-child(8):hover {
     background-color: var(--standard-red);
-  }
-  .specific-day:nth-child(5):hover a p,
-  .specific-day:nth-child(4):hover a p {
-    color: var(--black);
   }
 }
 
