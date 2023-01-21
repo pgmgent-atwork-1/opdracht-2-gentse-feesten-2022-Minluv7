@@ -43,9 +43,15 @@ const events_day_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
             }">
             ${this.noPicture(events)}
             <div class="border-events">
+            
+            <div class="category-hours-list">
+            
             <p>${events.start} u.</p>
             <h3>${events.title}</h3>
+            </div>
             <p>${events.category}</p>
+            
+            
             </div>
             </a>
             </li>`;
