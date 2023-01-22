@@ -32,10 +32,9 @@ const events_detail_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
         return event.slug === slug && event.day == day;
       });
       return `
-      <li class="detail-element"> 
-      
+      <li class="detail-element">
       <h2>${event.title}</h2>
-        <p class="detail__location">
+        <p>
         <div class="location_hours">
         <div class="location-router">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="21" height="32" viewBox="0 0 21 32">
@@ -62,7 +61,6 @@ const events_detail_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
         <p> Website:</p>
         <a href ="#"> ${this.noWebsite(event)}</a>
         </div>
-
       </li>`;
     },
 

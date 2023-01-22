@@ -70,7 +70,7 @@ const news_URL = "https://www.pgm.gent/data/gentsefeesten/news.json";
       const News = NEWS.slice(0, 3);
       return News.map((news) => {
         return `
-        <a href="#">
+        <a href="news.html">
         <div class="link_News">
         <p>${news.title}</p>
         <div class="title-arrow">

@@ -8,7 +8,6 @@ const EVENTSURL = "https://www.pgm.gent/data/gentsefeesten/events.json";
     cachElements() {
       this.$searchResult = document.getElementById("searchResult");
     },
-
     //filter events
     async registerFilterEvents() {
       const filterEvents = async (search) => {
