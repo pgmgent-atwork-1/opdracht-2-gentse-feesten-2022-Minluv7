@@ -32,14 +32,19 @@ const EVENTSURL = "https://www.pgm.gent/data/gentsefeesten/events.json";
         .map((event) => {
           console.log(event);
           return `
-          
-          <p>${event.day} ${event.day_of_week} juli</p>
-              ${this.noPicture(event)}
-              <h2>${event.title}</h2>
-              <div>
-              <p>${event.location}</p>
-              <p>${event.start} u.</p>
+          <ul class="search_events-pic">
+              <li class="picture-date"><p>${event.day_of_week} ${
+            event.day
+          } juli</p></li> 
+              <li>${this.noPicture(event)}</li>
+              <div class="bottom">
+              <li><h2>${event.title}</h2></li>
+              <div class=location__start>
+              <li><p>${event.location}</p></li>
+              <li><p>${event.start} u.</p></li>
               </div>
+              </div>
+          </ul>
           `;
         })
         .join("");
