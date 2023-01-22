@@ -856,13 +856,50 @@ p {
   background-color: var(--standard-red);
 }
 
+.list-view .search_events-pic .location__start li:first-child {
+  background-color: transparent;
+  padding: 0;
+}
+
+.list-view .search_events-pic .location__start li:first-child p {
+  color: var(--white);
+}
+
+.search_result .list-view {
+  flex-wrap: nowrap;
+  justify-content: start;
+  display: flex;
+}
+
+.list-view .search_events-pic .bottom {
+  border: none;
+  margin-right: 0;
+  padding: 0;
+  top: 0;
+  background-color: transparent;
+}
+
+.list-view .search_events-pic .bottom:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+.list-view .search_events-pic {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .list-view .eventy img {
   display: none;
 }
 
-.space_search {
+.list-view .sear .space_search {
   max-width: 90rem;
   margin: 0 auto;
+}
+
+.list-view .search_events-pic .search-no-pic {
+  display: none;
 }
 
 .search-events {
@@ -906,6 +943,10 @@ p {
   margin-left: -3rem;
 }
 
+.search_events-pic li:nth-child(2) img {
+  border: 0.0625rem solid var(--white);
+}
+
 .search_result {
   max-width: 90rem;
   margin: 0 auto;
@@ -923,15 +964,14 @@ p {
   list-style: none;
 }
 
-.search_events-pic li:nth-child(2) img {
-  border-top: 0.0625rem solid var(--white);
-  border-left: 0.0625rem solid var(--white);
-  border-right: 0.0625rem solid var(--white);
-}
-
 .search_result li h2 {
   color: var(--white);
   font-family: "Stolzl";
+}
+
+.space_change-buttons {
+  max-width: 90rem;
+  margin: 0 auto;
 }
 
 .picture-date {
@@ -946,8 +986,16 @@ p {
 
 .bottom {
   border: 0.0625rem solid var(--white);
-  margin: 0 auto;
+  margin-right: 2rem;
   padding: 2rem;
+  position: relative;
+  top: -2rem;
+  background-color: var(--black);
+}
+
+.bottom:hover {
+  transform: translate(1.6rem, -1.6rem);
+  box-shadow: -2rem 2rem 0rem 0rem var(--standard-red);
 }
 
 .location__start {
@@ -1111,9 +1159,8 @@ p {
 }
 
 .eight_events-box:hover {
-  transition: all 0.2s ease;
-  box-shadow: -1rem 1rem 0rem 1rem var(--standard-red);
-  margin-top: -4rem;
+  transform: translate(1.6rem, -1.6rem);
+  box-shadow: -2rem 2rem 0rem 0rem var(--standard-red);
   margin-left: 2rem;
   margin-right: 1.5rem;
 }

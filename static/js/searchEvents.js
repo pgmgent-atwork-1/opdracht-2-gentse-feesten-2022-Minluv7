@@ -36,7 +36,7 @@ const EVENTSURL = "https://www.pgm.gent/data/gentsefeesten/events.json";
               <li class="picture-date"><p>${event.day_of_week} ${
             event.day
           } juli</p></li> 
-              <li>${this.noPicture(event)}</li>
+              <li class="search-no-pic">${this.noPicture(event)}</li>
               <div class="bottom">
               <li><h2>${event.title}</h2></li>
               <div class=location__start>
